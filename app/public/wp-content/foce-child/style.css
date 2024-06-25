@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/*!
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short Child Theme
+ Theme URI: https://www.koukaki.local
+ Author: Votre nom
+ Author URI: Votre site web
+ Template: foce
+ Description: Thème enfant pour Fleurs d'orangers et chats errants - Oscars Short
+ Version: 0.1
+*/
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes rotateFlower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.fadeIn {
+  animation: fadeIn 1.6s ease-out 0.8s both;
+}
+
+.fadeDown {
+  animation: fadeDown 1.6s ease-out 0.8s both;
+}
+
+#colophon.oscars::before {
+  content: url("foce-child/assets/images/Sunflower.png");
+  display: none;
+  animation: rotateFlower 10s linear infinite;
+}
+
+#colophon.oscars::after {
+  content: url("foce-child/assets/images/Orchid.png");
+  display: none;
+  animation: rotateFlower 10s linear infinite;
+}
+
+.site-footer ul::after {
+  animation: rotateFlower 10s linear infinite;
+}
+
+#studio h2::after {
+  animation: rotateFlower 10s linear infinite;
+}
+
+#studio h2::before {
+  animation: rotateFlower 10s linear infinite;
+}
+
+.story__article::after {
+  animation: rotateFlower 10s linear infinite;
+}
+
+.story h2::after {
+  animation: rotateFlower 10s linear infinite;
+}
+
+.oscars {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6em;
+}
+.oscars h3.background-image {
+  background-image: url("themes/foce-child/assets/images/nuage_oscars.png");
+  background-repeat: no-repeat;
+  background-size: 762px 268px;
+  margin: 0;
+  background-position: center;
+  text-align: left;
+  font-size: 42px;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: -0.84px;
+  padding: 3em 2em;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 815px;
+  position: relative;
+}
+
+.left-image {
+  position: absolute;
+  left: 6em;
+  top: -7em;
+}
+
+.right-image {
+  position: absolute;
+  right: -4em;
+  bottom: 26em;
+}
+
+.left-image img,
+.right-image img {
+  animation: rotateFlower 10s linear infinite;
+}
+
+@media screen and (max-width: 1015px) {
+  .oscars {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .oscars h3.background-image {
+    background-size: cover;
+    padding-bottom: 100px; /* Réduire pour les petits écrans */
+  }
+}
+#parallax-video {
+  position: absolute !important;
+  z-index: 1 !important;
+}
+
+#parallax-logo {
+  position: relative !important;
+  animation: float 3s ease infinite;
+  z-index: 2 !important;
+}
+
+#parallax-header {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  #parallax-video {
+    display: none;
+  }
+  .banner {
+    min-height: 400px;
+  }
+}
+.section-personnages .swiper {
+  width: 10%;
+  overflow: hidden;
+}
+.section-personnages .swiper .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.section-personnages .swiper .swiper-slide {
+  height: auto;
+  text-align: center;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 0px;
+}
+.section-personnages .swiper .swiper-slide:not(.swiper-slide-active) {
+  opacity: 1;
+}
+.section-personnages .swiper .swiper-slide img {
+  width: 400px;
+  height: 440px;
+}
+.section-personnages .swiper .swiper-slide h4 {
+  margin-top: 10px;
+}
+
+.story #place {
+  background-image: url("./assets/images/Studio_Koukaki-image_place.png");
+}
+
+#place {
+  position: relative;
+}
+
+.nuages-groupe {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  opacity: 0.8;
+  filter: blur(12px);
+  top: 80px;
+  right: 540px;
+}
+
+.big_cloud {
+  margin-right: 20px;
+}
+
+.little_cloud {
+  margin-top: 180px;
+  padding-right: 120px;
+}/*# sourceMappingURL=style.css.map */
